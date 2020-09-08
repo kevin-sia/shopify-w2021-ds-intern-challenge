@@ -1,4 +1,11 @@
-# How many orders were shipped by Speedy Express in total?
+/*
+Shopify Winter 2021 Data Science Intern Challenge - Question 2
+
+by Kevin Sia
+September 8, 2020
+*/
+
+# a. How many orders were shipped by Speedy Express in total?
 
 SELECT s.ShipperName, COUNT(*)
 FROM Orders o
@@ -9,7 +16,7 @@ GROUP BY s.ShipperName;
 
 # ---------------------------------------------------------------
 
-# What is the last name of the employee with the most orders?
+# b. What is the last name of the employee with the most orders?
 
 SELECT e.LastName, COUNT(*)
 FROM orders o
@@ -21,7 +28,7 @@ ORDER BY COUNT(*) DESC;
 
 # ---------------------------------------------------------------
 
-# What product was ordered the most by customers in Germany?
+# c. What product was ordered the most by customers in Germany?
 
 SELECT p.ProductName, COUNT(*)
 FROM Customers c
